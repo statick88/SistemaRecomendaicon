@@ -30,19 +30,29 @@ docker compose up --build -d
 ```
 4. Ejecutar el sistema de recomendación
 
-Para ejecutar el sistema de recomendación, puedes utilizar el archivo **recommendation_system.py** que contiene el código del sistema de recomendación. Puedes ejecutar el archivo utilizando el siguiente comando:
+Par ejecutar el sistema de recomendación existen 3 formas en este repositorio:
+
+- **get_recommendations.py**: Este script de Python se puede ejecutar para obtener recomendaciones de productos en función de una consulta de entrada. Puedes ejecutar el script utilizando el siguiente comando:
 
 ``` bash
-python recommendation_system.py
+python get_recommendations.py "blue shirt"
 ```
-5. Acceder a la aplicación web
 
-Para acceder a la aplicación web, puedes utilizar el archivo **app.py** que contiene el código de la aplicación web. Puedes ejecutar el archivo utilizando el siguiente comando:
+- **improve_recommendations_system.py**: Este script de Python se puede ejecutar para mejorar el sistema de recomendación utilizando la API de Fake Store. Puedes ejecutar el script utilizando el siguiente comando:
+
+``` bash
+python improve_recommendations_system.py
+```
+
+- **app.py**: Este script de Python contiene el código de la aplicación web que proporciona recomendaciones de productos en función de una consulta de entrada. Puedes ejecutar el script utilizando el siguiente comando:
 
 ``` bash
 python app.py
 ```
-Luego, puedes enviar una solicitud POST a la URL de la aplicación web con la consulta de entrada para recibir recomendaciones de productos.
+
+5. Acceder a la aplicación web para recibir recomendaciones de productos
+
+Una vez que hayas ejecutado el script **app.py**, puedes acceder a la aplicación web para recibir recomendaciones de productos en función de una consulta de entrada.
 
 La url de la aplicación web es: [http://localhost:5000/recommend](http://localhost:5000/recommend)
 
