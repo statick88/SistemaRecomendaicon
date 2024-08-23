@@ -32,10 +32,10 @@ docker compose up --build -d
 
 Par ejecutar el sistema de recomendación existen 3 formas en este repositorio:
 
-- **get_recommendations.py**: Este script de Python se puede ejecutar para obtener recomendaciones de productos en función de una consulta de entrada. Puedes ejecutar el script utilizando el siguiente comando:
+- **recommendation_system.py**: Este script de Python se puede ejecutar para obtener recomendaciones de productos en función de una consulta de entrada. Puedes ejecutar el script utilizando el siguiente comando:
 
 ``` bash
-python get_recommendations.py "blue shirt"
+python recommendation_system.py 
 ```
 
 - **improve_recommendations_system.py**: Este script de Python se puede ejecutar para mejorar el sistema de recomendación utilizando la API de Fake Store. Puedes ejecutar el script utilizando el siguiente comando:
