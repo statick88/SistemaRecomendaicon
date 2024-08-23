@@ -44,6 +44,7 @@ python app.py
 ```
 Luego, puedes enviar una solicitud POST a la URL de la aplicación web con la consulta de entrada para recibir recomendaciones de productos.
 
+La url de la aplicación web es: [http://127.0.0.1:5000/](http://127.0.0.1:5000)
 
 Ejemplo de solicitud POST:
 
