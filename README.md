@@ -4,27 +4,51 @@ Este es un sistema de recomendación simple que sugiere productos a los usuarios
 
 ## Requisitos previos
 
-Para ejecutar el sistema de recomendación, necesitarás tener instalado Python 3.7 o superior, Redis y las bibliotecas redis y requests en tu entorno de Python. Puedes instalar las bibliotecas utilizando los siguientes comandos:
-
-```bash
-pip install redis
-pip install requests
-```
-Además, necesitarás una conexión a Internet para acceder a la API de Fake Store y obtener datos de productos de ejemplo.
+Para ejecutar el sistema de recomendación, necesitarás tener instalado Docker y Docker Compose en tu entorno. Puedes instalarlos siguiendo las instrucciones de la documentación oficial de Docker.
 
 ## Ejecución del sistema de recomendación
 
-Para ejecutar el sistema de recomendación, puedes guardar el código en un archivo Python (por ejemplo, recommendation_system.py) y ejecutarlo desde la línea de comandos:
+1. Clona el repositorio:
 
-```bash
+``` bash
+git clone https://github.com/statick88/SistemaRecomendacion.git
+```
+
+2. Instalación de bibliotecas desde el archivo requirements.txt
+
+Para instalar las bibliotecas necesarias para ejecutar el sistema de recomendación, puedes utilizar el archivo **requirements.txt** que contiene una lista de las bibliotecas y sus versiones necesarias. Puedes instalar las bibliotecas utilizando el siguiente comando:
+
+``` bash
+pip install -r requirements.txt
+```
+3. Levantar el servidor Redis con Docker Compose
+
+Para iniciar el contenedor de Redis, puedes utilizar Docker Compose para configurar el contenedor de Redis. Puedes ejecutar el siguiente comando para iniciar el contenedor de Redis:
+
+``` bash
+docker compose up --build -d
+```
+4. Ejecutar el sistema de recomendación
+
+Para ejecutar el sistema de recomendación, puedes utilizar el archivo **recommendation_system.py** que contiene el código del sistema de recomendación. Puedes ejecutar el archivo utilizando el siguiente comando:
+
+``` bash
 python recommendation_system.py
 ```
-El sistema de recomendación generará una lista de recomendaciones de productos basadas en una entrada de texto.
+5. Acceder a la aplicación web
 
-## Mejoras
+Para acceder a la aplicación web, puedes utilizar el archivo **app.py** que contiene el código de la aplicación web. Puedes ejecutar el archivo utilizando el siguiente comando:
 
-Puedes mejorar el sistema de recomendación agregando más funcionalidades y refinando el algoritmo de recomendación. Algunas ideas para mejorar el sistema de recomendación incluyen:
+``` bash
+python app.py
+```
+Luego, puedes enviar una solicitud POST a la URL de la aplicación web con la consulta de entrada para recibir recomendaciones de productos.
 
-- Utilizar técnicas de procesamiento de lenguaje natural (NLP) para analizar y comparar la entrada
-- Implementar un algoritmo de filtrado colaborativo para hacer recomendaciones basadas en el comportamiento de los usuarios
-- Utilizar técnicas de aprendizaje automático para mejorar la precisión de las recomendaciones
+Ejemplo de solicitud POST:
+
+``` json
+{
+    "input_text": "blue shirt"
+}
+```
+Con estos pasos, habrás ejecutado el sistema de recomendación y accedido a la aplicación web para recibir recomendaciones de productos en función de la consulta de entrada.
